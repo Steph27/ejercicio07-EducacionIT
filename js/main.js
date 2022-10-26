@@ -126,13 +126,13 @@ function main(){
 
     function final(){
 
-        let listaLi = document.getElementsByName('li');
+        let listaLi = document.getElementsByTagName('li');
         
         for (let index = 0; index < listaLi.length; index++) {
             listaLi[index].innerHTML = "[OK]"+listaLi[index].innerHTML;
             
         }
-        }
+    }
 
     setTimeout(() => {
         final()

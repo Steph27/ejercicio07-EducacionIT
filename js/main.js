@@ -25,8 +25,8 @@ function main(){
     **** PUNTO 4 ****
     *****************/
 
-    let listaInput = document.querySelectorAll('input');
-    let boton = document.querySelector('button');
+    let listaInput = document.getElementsByTagName('input');
+    let boton = document.getElementsByTagName('button')[0];
     
     for (let index = 0; index < listaInput.length; index++) {
         listaInput[index].disabled = false;    
@@ -121,17 +121,22 @@ function main(){
     /****************
     **** PUNTO 7 ****
     *****************/
-   final();
+    
+    
 
     function final(){
 
-        let listaLi = document.querySelectorAll('li');
+        let listaLi = document.getElementsByName('li');
         
         for (let index = 0; index < listaLi.length; index++) {
             listaLi[index].innerHTML = "[OK]"+listaLi[index].innerHTML;
             
         }
         }
+
+    setTimeout(() => {
+        final()
+    }, 5000);
     
 
 }
